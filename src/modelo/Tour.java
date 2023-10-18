@@ -2,8 +2,6 @@
 package modelo;
 
 public class Tour {
-    //Leaf 
-    
     private int idTour;
     private String nombreTour;
     private String descripcionTour;
@@ -63,6 +61,14 @@ public class Tour {
     public void setHorasTour(double horasTour) {
         this.horasTour = horasTour;
     }
+
+    @Override
+    public String toString() {
+        return "Tour{" + "idTour=" + idTour + ", nombreTour=" + 
+                nombreTour + ", descripcionTour=" + descripcionTour + ", recomendacionesTour=" +
+                recomendacionesTour + ", horasTour=" + horasTour + '}';
+    }
+    
     
     
 }

@@ -1,8 +1,6 @@
 
 package modelo;
 
-
-
 public class Pais {
      private String nombrePais;
 

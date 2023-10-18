@@ -18,7 +18,8 @@ public class Ciudad implements IComponente {
     public Ciudad() {
     }
 
-    public Ciudad(String nombreCiudad, String vueloLlegada, String hotel, Tour cityTour, boolean planAlimentacion, Date checkIn, Date checkOut) {
+    public Ciudad(String nombreCiudad, String vueloLlegada, String hotel,
+            Tour cityTour, boolean planAlimentacion, Date checkIn, Date checkOut) {
         this.nombreCiudad = nombreCiudad;
         this.vueloLlegada = vueloLlegada;
         this.hotel = hotel;
