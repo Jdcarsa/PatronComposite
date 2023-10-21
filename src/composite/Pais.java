@@ -2,7 +2,7 @@ package composite;
 
 import java.util.ArrayList;
 
-public class Pais implements IComponente {
+public class Pais implements IComposite {
 
     private String nombrePais;
     private ArrayList<IComponente> ciudades;
@@ -12,12 +12,14 @@ public class Pais implements IComponente {
         this.ciudades = ciudades;
     }
 
-    public void addComponente(IComponente c) {
-        ciudades.add(c);
+    @Override
+    public void agregar(IComponente componente) {
+        ciudades.add(componente);
     }
 
-    public void removeComponente(IComponente c) {
-        ciudades.remove(c);
+    @Override
+    public void eliminar(IComponente componente) {
+        ciudades.remove(componente);
     }
 
     public String getNombrePais() {

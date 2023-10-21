@@ -5,6 +5,7 @@
 package main;
 
 import composite.IComponente;
+import composite.IComposite;
 import composite.PaqueteComposite;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,10 +27,10 @@ public class Main {
         ArrayList<IComponente> ciudades = new ArrayList<>();
         ArrayList<IComponente> ciudades2 = new ArrayList<>();
         PaqueteComposite paqPaises = new PaqueteComposite("Europa",paises);
-        IComponente pais1 = new Pais("Inglaterra",ciudades);
-        IComponente pais2 = new Pais("Roma",ciudades2);
-        paqPaises.addComponente(pais1);
-        paqPaises.addComponente(pais2);
+        IComposite pais1 = new Pais("Inglaterra",ciudades);
+        IComposite  pais2 = new Pais("Roma",ciudades2);
+        paqPaises.agregar(pais1);
+        paqPaises.agregar(pais2);
         Pais p = (Pais) pais1;
         Tour t = new Tour(1, "buen tour", "good tour", "5 estrellas tour ", 12);
         String textoFecha = "15/10/2024";
@@ -38,7 +39,7 @@ public class Main {
         IComponente ciudad1 = new Ciudad("Londres", "1200", "hotel 5 estrellas",
                 t, true, fecha, fecha);
         System.out.println(""+ paqPaises.getNombrePaquete());
-        p.addComponente(ciudad1);
+        p.agregar(ciudad1);
         paqPaises.mostrarCaracteristicas();
     }
 

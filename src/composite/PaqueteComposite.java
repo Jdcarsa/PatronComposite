@@ -4,7 +4,7 @@ package composite;
 import java.util.ArrayList;
 
 
-public class PaqueteComposite implements IComponente {
+public class PaqueteComposite implements  IComposite {
 
     private String nombrePaquete;
     private ArrayList <IComponente> paises;
@@ -14,12 +14,14 @@ public class PaqueteComposite implements IComponente {
         this.paises = paises;
     }
     
-    public void addComponente(IComponente c){
-        paises.add(c);
+    @Override
+    public void agregar(IComponente componente){
+        paises.add(componente);
     }
     
-    public void removeComponente(IComponente c){
-        paises.remove(c);
+    @Override
+    public void eliminar(IComponente componente){
+        paises.remove(componente);
     }
 
     public String getNombrePaquete() {
