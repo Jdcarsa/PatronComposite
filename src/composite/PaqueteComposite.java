@@ -7,18 +7,19 @@ import java.util.ArrayList;
 public class PaqueteComposite implements IComponente {
 
     private String nombrePaquete;
-    private ArrayList <IComponente> componentes = new ArrayList<>();
+    private ArrayList <IComponente> paises;
 
-    public PaqueteComposite(String nombrePaquete) {
+    public PaqueteComposite(String nombrePaquete, ArrayList<IComponente> paises) {
         this.nombrePaquete = nombrePaquete;
+        this.paises = paises;
     }
     
     public void addComponente(IComponente c){
-        componentes.add(c);
+        paises.add(c);
     }
     
     public void removeComponente(IComponente c){
-        componentes.remove(c);
+        paises.remove(c);
     }
 
     public String getNombrePaquete() {
@@ -31,7 +32,7 @@ public class PaqueteComposite implements IComponente {
     
     @Override
     public void mostrarCaracteristicas() {
-       for(IComponente c : componentes){
+       for(IComponente c : paises){
            c.mostrarCaracteristicas();
        }
     }

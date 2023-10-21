@@ -94,7 +94,7 @@ public class Ciudad implements IComponente {
     @Override
     public String toString() {
         return "Ciudad{" + "nombreCiudad=" + nombreCiudad + ", vueloLlegada=" + vueloLlegada 
-                + ", hotel=" + hotel + ", cityTour=" + cityTour.toString() + ", planAlimentacion=" + planAlimentacion + ", checkIn="
+                + ", hotel=" + hotel + ", \ncityTour=" + cityTour.toString() + ", \nplanAlimentacion=" + planAlimentacion + ", checkIn="
                 + checkIn + ", checkOut=" + checkOut + '}';
     }
     
