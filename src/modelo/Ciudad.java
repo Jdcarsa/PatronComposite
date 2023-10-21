@@ -88,13 +88,13 @@ public class Ciudad implements IComponente {
 
     @Override
     public void mostrarCaracteristicas() {
-       toString();
+        System.out.println(toString());
     }
 
     @Override
     public String toString() {
         return "Ciudad{" + "nombreCiudad=" + nombreCiudad + ", vueloLlegada=" + vueloLlegada 
-                + ", hotel=" + hotel + ", cityTour=" + cityTour + ", planAlimentacion=" + planAlimentacion + ", checkIn="
+                + ", hotel=" + hotel + ", cityTour=" + cityTour.toString() + ", planAlimentacion=" + planAlimentacion + ", checkIn="
                 + checkIn + ", checkOut=" + checkOut + '}';
     }
     
